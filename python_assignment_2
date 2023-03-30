@@ -1,0 +1,35 @@
+#accessing item in set 
+bag = {"pen","copy","book"}
+
+print(list(bag)[0])
+
+# difference b/w discard() and remove()
+bag.discard("scale")
+
+print(bag)
+
+# bag.remove("scale")
+
+# print(bag)
+
+#intersection_update
+table = {"copy","phone","laptop"}
+
+table.intersection_update(bag)
+
+print(table)
+
+#symmetric_difference_update
+table.symmetric_difference_update(bag)
+
+print(table)
+
+#symmetric_difference
+table.symmetric_difference(bag)
+
+print(table)
+
+#dict()
+dict(first = "1", second = "2")
+
+print(dict)
