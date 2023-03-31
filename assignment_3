@@ -1,0 +1,22 @@
+# diff b/w "===" and "=="
+
+# "==" and "===" are both equality operators, but "===" is a strict equality operator while "==" is a normal equality operator. "===" will compare the type of data along with the data. (9 === "9") will return false while (9 == "9") will return true.
+
+# pass,continue,break statements in if-else 
+
+emp = ["ram","sham","pam","uv","mohit","speed","jay","shanks","zombs"]
+
+for i in emp:
+    if i == "sham":
+        pass            # null statement
+    
+    elif i == "uv":
+        continue        # "uv" will be skipped and loop will continue executing
+    elif i == "shanks":
+        break           # "shanks" will be skipped and loops will not execute any further
+    print(i) 
+    
+# range() prog  with start,stop and step as parameters
+
+for x in range(10,100,10):
+    print(x)              # the output will be : 10,20,3
