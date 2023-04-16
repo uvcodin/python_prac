@@ -13,3 +13,43 @@ An HTTP 503 status code (Service Unavailable) typically indicates a performance 
 
 #301 :
 The HTTP 301 status response code indicates that the requested resource has been definitively moved to the URL given by the Location headers.
+
+
+
+#HTTP Methods
+import requests
+import json
+
+# Post
+ulr = "https://jsonplaceholder.typicode.com/todos"
+todo = {"name": "via", "age": 28, "profession": "wanderer"}
+print(type(todo))
+response = requests.post(ulr, json=todo)
+print(response)
+print(response.json())
+
+
+#Get
+url2 = "https://jsonplaceholder.typicode.com/todos/10"
+response = requests.get(url2)
+print(response.json())
+
+
+#Put
+todo = {"name": "via", "age": 28, "profession": "wanderer"}
+response = requests.put(url2, json=todo)
+print(response)
+print(response.json())
+
+
+#Patch
+todo = {"title" : "Tsumugi"}
+response = requests.patch(url2, json=todo)
+print(response)
+print(response.json())
+
+
+#Delete 
+response = requests.delete(url2)
+print(response)
+print(response.json())
